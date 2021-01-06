@@ -1,0 +1,17 @@
+{
+  "name": "vuelectron",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "w": "cross-env NODE_ENV=production webpack",
+    "start": "electron ./dist/main.js",
+    "r": "yarn w && yarn start"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "electron": "^11.1.1",
+    "html-webpack-plugin": "^4.5.1",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.1"
+  }
+}
