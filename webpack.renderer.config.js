@@ -10,7 +10,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "dist/app"),
-    filename: "[name].js"
+    filename: "[name].js",
+    publicPath: "./"
   },
   target: "electron-renderer",
   module: {
@@ -41,6 +42,14 @@ module.exports = {
         ]
       }
     ]
+  },
+  devServer: {
+    contentBase: path.join(__dirname, "../dist/renderer"),
+    historyApiFallback: true,
+    compress: true,
+    hot: true,
+    port: 4000,
+    publicPath: "/"
   },
   plugins: [
     new HtmlWebpackPlugin({

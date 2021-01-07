@@ -10,7 +10,17 @@ function createWindow() {
     }
   });
 
-  win.loadFile("./app/index.html");
+  if (process.env.NODE_ENV === "development") {
+    win.loadURL(`http://localhost:4000`);
+  } else {
+    win.loadURL(
+      require("url").format({
+        pathname: require("path").join(__dirname, "../index.html"),
+        protocol: "file:",
+        slashes: true
+      })
+    );
+  }
 }
 
 app.whenReady().then(createWindow);
