@@ -3,12 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "r": "yarn w && yarn start",
-    "start": "electron ./dist/main.js",
-    "w": "cross-env NODE_ENV=production webpack"
+    "r": "yarn wm && yarn wr && electron ./dist/main.js",
+    "wm": "cross-env NODE_ENV=production webpack --config webpack.main.config.js",
+    "wr": "cross-env NODE_ENV=production webpack --config webpack.renderer.config.js"
   },
   "dependencies": {
     "vue": "^2.6.11"
@@ -31,7 +28,8 @@
     "vue-loader": "^15.9.6",
     "vue-template-compiler": "^2.6.12",
     "webpack": "^5.11.1",
-    "webpack-cli": "^4.3.1"
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "^3.11.1"
   },
   "_id": "vuelectron@1.0.0",
   "license": "MIT",
