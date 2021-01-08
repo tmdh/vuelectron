@@ -27,11 +27,12 @@ module.exports = {
           {
             loader: "css-loader",
             options: { esModule: false, sourceMap: isDev }
-          }
+          },
+          "postcss-loader"
         ]
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
+        test: /\.(png|jpe?g|gif|svg|ttf|otf|woff|woff2)$/i,
         use: [
           {
             loader: "file-loader",

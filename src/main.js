@@ -15,7 +15,7 @@ function createWindow() {
   } else {
     win.loadURL(
       require("url").format({
-        pathname: require("path").join(__dirname, "../index.html"),
+        pathname: require("path").join(__dirname, "../dist/app/index.html"),
         protocol: "file:",
         slashes: true
       })
