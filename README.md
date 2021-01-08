@@ -1,24 +1,21 @@
 # vuelectron
 
-## Project setup
+A boilerplate for Electron + Vue + Webpack + Tailwind
+
+## Renderer setup (Compiles and hot-reloads for development)
+
 ```
-yarn install
+yarn dev:one
 ```
 
-### Compiles and hot-reloads for development
+### Main process setup
+
 ```
-yarn serve
+yarn dev:two
 ```
 
 ### Compiles and minifies for production
-```
-yarn build
-```
 
-### Lints and fixes files
 ```
-yarn lint
+yarn prod
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
